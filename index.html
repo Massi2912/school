@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Allgemeinwissen Quiz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="bg-blob blob1"></div>
+  <div class="bg-blob blob2"></div>
+  <div class="bg-blob blob3"></div>
+
+  <!-- Passwort-Screen -->
+  <div id="password-screen" class="screen active">
+    <div class="pw-card" id="pw-card">
+      <div class="pw-icon">&#128274;</div>
+      <h1>Quiz starten</h1>
+      <p class="pw-sub">Gib das Passwort ein, um loszulegen</p>
+      <div class="pw-input-row">
+        <input type="password" id="pw-input" placeholder="Passwort..." autocomplete="off" />
+        <button id="pw-btn">
+          <span>&#8594;</span>
+        </button>
+      </div>
+      <p id="pw-error" class="pw-error hidden">Falsches Passwort &ndash; nochmal versuchen!</p>
+    </div>
+  </div>
+
+  <!-- Quiz-Screen -->
+  <div id="quiz-screen" class="screen">
+    <div class="quiz-wrap">
+      <div class="quiz-header">
+        <div class="quiz-title-row">
+          <span class="quiz-icon">&#9881;</span>
+          <h1>Allgemeinwissen</h1>
+        </div>
+        <p class="quiz-sub">Beantworte alle <strong>10 Fragen</strong> und klicke auf Auswerten</p>
+        <div id="progress-bar-wrap"><div id="progress-bar"></div></div>
+      </div>
+
+      <div id="questions-wrapper"></div>
+
+      <div class="btn-row">
+        <button class="btn-main" id="btn-evaluate">&#10003; Auswerten</button>
+        <button class="btn-secondary" id="btn-reset">&#8635; Neu starten</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Glückwunsch-Popup -->
+  <div id="popup-overlay" class="popup-hidden">
+    <div class="popup">
+      <div class="popup-icon">&#9733;</div>
+      <h2>Gl&uuml;ckwunsch!</h2>
+      <p>Alle 10 Fragen richtig!<br>Du bist ein echter Allgemeinwissens-Profi!</p>
+      <div class="popup-code-label">Dein Code</div>
+      <div class="popup-code">471</div>
+      <button class="btn-main" id="btn-close-popup">Super, danke!</button>
+    </div>
+  </div>
+
+  <footer class="site-footer">made by Massimo</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
